@@ -1,0 +1,1647 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "Kimchi MIPI-CSI Camera Lid"
+Date "2021-06-26"
+Rev "1.0"
+Comp "GroupGets"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	11800 1150 11800 1400
+$Comp
+L power:GND #PWR0226
+U 1 1 5D90F565
+P 11800 2150
+F 0 "#PWR0226" H 11800 1900 50  0001 C CNN
+F 1 "GND" H 11805 1977 50  0000 C CNN
+F 2 "" H 11800 2150 50  0001 C CNN
+F 3 "" H 11800 2150 50  0001 C CNN
+	1    11800 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 2150 11800 2000
+$Comp
+L power:GND #PWR0227
+U 1 1 5D93779A
+P 12300 2150
+F 0 "#PWR0227" H 12300 1900 50  0001 C CNN
+F 1 "GND" H 12305 1977 50  0000 C CNN
+F 2 "" H 12300 2150 50  0001 C CNN
+F 3 "" H 12300 2150 50  0001 C CNN
+	1    12300 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12200 1800 12300 1800
+Wire Wire Line
+	12300 1800 12300 2150
+Wire Wire Line
+	12400 1700 12200 1700
+Wire Wire Line
+	12400 1600 12200 1600
+$Comp
+L Memory_EEPROM:24LC16 U1
+U 1 1 5D8EE848
+P 11800 1700
+F 0 "U1" H 11800 2181 50  0000 C CNN
+F 1 "24C32" H 11800 2090 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.36x1.46mm" H 11800 1700 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/80/4e/8c/54/f2/63/4c/4a/CD00001012.pdf/files/CD00001012.pdf/jcr:content/translations/en.CD00001012.pdf" H 11800 1700 50  0001 C CNN
+F 4 "ST" H 11800 1700 50  0001 C CNN "Mfgr"
+F 5 "M24C32-FMC6TG" H 11800 1700 50  0001 C CNN "Part"
+F 6 "497-15757-1-ND" H 11800 1700 50  0001 C CNN "Vendorpart"
+	1    11800 1700
+	1    0    0    -1  
+$EndComp
+Text Label 12400 1700 0    50   ~ 0
+I2C4_SCL
+Text Label 12400 1600 0    50   ~ 0
+I2C4_SDA
+Text Notes 12050 1400 0    50   ~ 0
+7-bit addr: 0x57/0x5F
+Wire Wire Line
+	11350 1450 11350 1600
+Wire Wire Line
+	11350 1800 11400 1800
+Wire Wire Line
+	11400 1700 11350 1700
+Connection ~ 11350 1700
+Wire Wire Line
+	11350 1700 11350 1800
+Wire Wire Line
+	11400 1600 11350 1600
+Connection ~ 11350 1600
+Wire Wire Line
+	11350 1600 11350 1700
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 5EA00236
+P 12000 10300
+F 0 "LOGO1" H 12000 10575 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 12000 10075 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 12000 10300 50  0001 C CNN
+F 3 "~" H 12000 10300 50  0001 C CNN
+	1    12000 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x30_Counter_Clockwise J2
+U 1 1 5E5E151A
+P 5050 2850
+AR Path="/5E5E151A" Ref="J2"  Part="1" 
+AR Path="/5E34BAA5/5E5E151A" Ref="J?"  Part="1" 
+F 0 "J2" H 5100 4467 50  0000 C CNN
+F 1 "DF40HC(3.5)-60DS" H 5100 4376 50  0000 C CNN
+F 2 "kimchi_ulid:DF40HC(3.5)-60DS" H 5050 2850 50  0001 C CNN
+F 3 "~" H 5050 2850 50  0001 C CNN
+	1    5050 2850
+	1    0    0    -1  
+$EndComp
+Text Label 2750 2950 0    50   ~ 0
+CAM_CK_N
+Text Label 2750 2850 0    50   ~ 0
+CAM_CK_P
+Text Label 2750 3350 0    50   ~ 0
+CAM_D0_N
+Text Label 2750 3250 0    50   ~ 0
+CAM_D0_P
+Text Label 2750 3150 0    50   ~ 0
+CAM_D1_N
+Text Label 2750 3050 0    50   ~ 0
+CAM_D1_P
+Text Label 2750 2750 0    50   ~ 0
+CAM_D2_N
+Text Label 2750 2650 0    50   ~ 0
+CAM_D2_P
+Text Label 2750 2550 0    50   ~ 0
+CAM_D3_N
+Text Label 2750 2450 0    50   ~ 0
+CAM_D3_P
+Text Label 2750 3950 0    50   ~ 0
+DISP_CK_N
+Text Label 2750 3850 0    50   ~ 0
+DISP_CK_P
+Text Label 2750 4350 0    50   ~ 0
+DISP_D0_N
+Text Label 2750 4250 0    50   ~ 0
+DISP_D0_P
+Text Label 2750 4150 0    50   ~ 0
+DISP_D1_N
+Text Label 2750 4050 0    50   ~ 0
+DISP_D1_P
+Text Label 2750 3750 0    50   ~ 0
+DISP_D2_N
+Text Label 2750 3650 0    50   ~ 0
+DISP_D2_P
+Text Label 2750 3550 0    50   ~ 0
+DISP_D3_N
+Text Label 2750 3450 0    50   ~ 0
+DISP_D3_P
+Text GLabel 2750 1750 2    50   Input ~ 0
+USB2_VBUS
+Text GLabel 2750 1550 2    50   Input ~ 0
+USB2_DN
+Text GLabel 2750 1450 2    50   Input ~ 0
+USB2_DP
+Text GLabel 2750 1650 2    50   Input ~ 0
+USB2_ID
+Text Label 4850 1550 2    50   ~ 0
+ENET_MDC
+Text Label 4850 1450 2    50   ~ 0
+ENET_MDIO
+Text Label 4850 2650 2    50   ~ 0
+ENET_TX_CTL
+Text Label 4850 2750 2    50   ~ 0
+ENET_TXC
+Text Label 4850 2350 2    50   ~ 0
+ENET_TD0
+Text Label 4850 2250 2    50   ~ 0
+ENET_TD1
+Text Label 4850 2550 2    50   ~ 0
+ENET_TD2
+Text Label 4850 2450 2    50   ~ 0
+ENET_TD3
+Text Label 4850 2150 2    50   ~ 0
+ENET_RX_CTL
+Text Label 4850 2050 2    50   ~ 0
+ENET_RXC
+Text Label 4850 1950 2    50   ~ 0
+ENET_RD0
+Text Label 4850 1750 2    50   ~ 0
+ENET_RD1
+Text Label 4850 1850 2    50   ~ 0
+ENET_RD2
+Text Label 4850 1650 2    50   ~ 0
+ENET_RD3
+Text Label 2250 1750 2    50   ~ 0
+USDHC3_DATA0
+Text Label 2250 1950 2    50   ~ 0
+USDHC3_DATA2
+Text Label 2250 1850 2    50   ~ 0
+USDHC3_DATA1
+Text GLabel 2250 4050 0    50   Input ~ 0
+ECSPI2_SCLK
+Text GLabel 2250 4350 0    50   Input ~ 0
+ECSPI2_MISO
+Text GLabel 2250 4250 0    50   Input ~ 0
+ECSPI2_MOSI
+Text GLabel 2250 4150 0    50   Input ~ 0
+ECSPI2_SS0
+Text GLabel 2250 3650 0    50   Input ~ 0
+ECSPI1_SCLK
+Text GLabel 2250 3950 0    50   Input ~ 0
+ECSPI1_MISO
+Text GLabel 2250 3850 0    50   Input ~ 0
+ECSPI1_MOSI
+Text GLabel 2250 3750 0    50   Input ~ 0
+ECSPI1_SS0
+Text GLabel 2250 3550 0    50   Input ~ 0
+I2C1_SCL
+Text GLabel 2250 3450 0    50   Input ~ 0
+I2C1_SDA
+Text GLabel 2250 3250 0    50   Input ~ 0
+I2C2_SDA
+Text GLabel 2250 3050 0    50   Input ~ 0
+I2C3_SDA
+Text GLabel 2250 2850 0    50   Input ~ 0
+I2C4_SDA
+Text GLabel 2250 3350 0    50   Input ~ 0
+I2C2_SCL
+Text GLabel 2250 3150 0    50   Input ~ 0
+I2C3_SCL
+Text GLabel 2250 2950 0    50   Input ~ 0
+I2C4_SCL
+$Comp
+L kimchi_ulid:VDD_5V #PWR0102
+U 1 1 5E5E1566
+P 1200 2050
+F 0 "#PWR0102" H 1200 1900 50  0001 C CNN
+F 1 "VDD_5V" H 1215 2223 50  0000 C CNN
+F 2 "" H 1200 2050 50  0001 C CNN
+F 3 "" H 1200 2050 50  0001 C CNN
+	1    1200 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1200 2050
+Wire Wire Line
+	1200 2250 1200 2150
+Connection ~ 1200 2150
+Wire Wire Line
+	1200 2150 1200 2050
+$Comp
+L power:GND #PWR0103
+U 1 1 5E5E1572
+P 1200 2750
+F 0 "#PWR0103" H 1200 2500 50  0001 C CNN
+F 1 "GND" H 1205 2577 50  0000 C CNN
+F 2 "" H 1200 2750 50  0001 C CNN
+F 3 "" H 1200 2750 50  0001 C CNN
+	1    1200 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2650 1200 2750
+Connection ~ 1200 2750
+Wire Wire Line
+	1200 2550 1200 2650
+Connection ~ 1200 2650
+$Comp
+L kimchi_ulid:VDD_1V8 #PWR0104
+U 1 1 5E5E157E
+P 6200 2950
+F 0 "#PWR0104" H 6200 2800 50  0001 C CNN
+F 1 "VDD_1V8" H 6215 3123 50  0000 C CNN
+F 2 "" H 6200 2950 50  0001 C CNN
+F 3 "" H 6200 2950 50  0001 C CNN
+	1    6200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3150 5350 3150
+Wire Wire Line
+	5350 3050 6200 3050
+Connection ~ 6200 3050
+Wire Wire Line
+	6200 3050 6200 3150
+Wire Wire Line
+	6200 2950 5350 2950
+Wire Wire Line
+	6200 2950 6200 3050
+Text GLabel 5350 1450 2    50   Input ~ 0
+PCIE_USB_D_N
+Text GLabel 5350 1550 2    50   Input ~ 0
+PCIE_USB_D_P
+Text GLabel 5350 2650 2    50   Input ~ 0
+UART3_TX
+Text GLabel 5350 2550 2    50   Input ~ 0
+UART3_RX
+Text GLabel 5350 2750 2    50   Input ~ 0
+UART1_RX
+Text GLabel 5350 2850 2    50   Input ~ 0
+UART1_TX
+Text GLabel 4850 4150 0    50   Input ~ 0
+GPIO1[9]
+Text GLabel 4850 3950 0    50   Input ~ 0
+GPIO1[11]
+Text GLabel 4850 3650 0    50   Input ~ 0
+GPIO1[14]
+Text GLabel 4850 3550 0    50   Input ~ 0
+GPIO1[15]
+$Comp
+L power:GND #PWR0105
+U 1 1 5E5E1594
+P 6200 3650
+F 0 "#PWR0105" H 6200 3400 50  0001 C CNN
+F 1 "GND" H 6205 3477 50  0000 C CNN
+F 2 "" H 6200 3650 50  0001 C CNN
+F 3 "" H 6200 3650 50  0001 C CNN
+	1    6200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3550 6200 3550
+Wire Wire Line
+	5350 3450 6200 3450
+Wire Wire Line
+	6200 3450 6200 3550
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0106
+U 1 1 5E5E15A0
+P 6200 1750
+F 0 "#PWR0106" H 6200 1600 50  0001 C CNN
+F 1 "VDD_3V3" H 6215 1923 50  0000 C CNN
+F 2 "" H 6200 1750 50  0001 C CNN
+F 3 "" H 6200 1750 50  0001 C CNN
+	1    6200 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1750 5350 1750
+Wire Wire Line
+	6200 1750 6200 1850
+Wire Wire Line
+	6200 1850 5350 1850
+Connection ~ 6200 1750
+Wire Wire Line
+	5350 1950 6200 1950
+Wire Wire Line
+	6200 1950 6200 1850
+Connection ~ 6200 1850
+$Comp
+L power:GND #PWR0107
+U 1 1 5E5E15AD
+P 6200 2450
+F 0 "#PWR0107" H 6200 2200 50  0001 C CNN
+F 1 "GND" H 6205 2277 50  0000 C CNN
+F 2 "" H 6200 2450 50  0001 C CNN
+F 3 "" H 6200 2450 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2250 5350 2250
+Wire Wire Line
+	5350 2350 6200 2350
+Connection ~ 6200 2350
+Wire Wire Line
+	6200 2350 6200 2250
+Connection ~ 6200 2450
+Wire Wire Line
+	6200 2450 6200 2350
+Wire Wire Line
+	5350 2450 6200 2450
+Text GLabel 5350 3750 2    50   Input ~ 0
+SAI3_MCLK
+Text GLabel 5350 4250 2    50   Input ~ 0
+SAI3_TXD
+Text GLabel 5350 4350 2    50   Input ~ 0
+SAI3_TXC
+Text GLabel 5350 3850 2    50   Input ~ 0
+SAI3_TXFS
+Text GLabel 5350 4150 2    50   Input ~ 0
+SAI3_RXD
+Text GLabel 5350 3950 2    50   Input ~ 0
+SAI3_RXC
+Text GLabel 5350 4050 2    50   Input ~ 0
+SAI3_RXFS
+Text GLabel 4850 3350 0    50   Input ~ 0
+SAI2_MCLK
+Text GLabel 4850 3150 0    50   Input ~ 0
+SAI2_TXD0
+Text GLabel 4850 3250 0    50   Input ~ 0
+SAI2_TXC
+Text GLabel 4850 2950 0    50   Input ~ 0
+SAI2_TXFS
+Text GLabel 4850 2850 0    50   Input ~ 0
+SAI2_RXD0
+Text GLabel 4850 3050 0    50   Input ~ 0
+SAI2_RXC
+Text GLabel 4850 3450 0    50   Input ~ 0
+SAI2_RXFS
+Text GLabel 4850 4350 0    50   Input ~ 0
+GPIO1[0]
+Text GLabel 4850 4250 0    50   Input ~ 0
+GPIO1[1]
+Text GLabel 4850 4050 0    50   Input ~ 0
+GPIO1[10]
+Text GLabel 4850 3850 0    50   Input ~ 0
+GPIO1[12]
+Text GLabel 4850 3750 0    50   Input ~ 0
+GPIO1[13]
+Text Label 2250 1450 2    50   ~ 0
+USDHC3_CMD
+Text Label 2250 1550 2    50   ~ 0
+USDHC3_CLK
+Text Label 2250 1650 2    50   ~ 0
+USDHC3_DATA3
+Wire Notes Line
+	4150 2800 4850 2800
+Wire Notes Line
+	4850 2800 4850 4400
+Wire Notes Line
+	4850 4400 4150 4400
+Wire Notes Line
+	4150 4400 4150 2800
+Text Notes 4250 3750 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	5350 3700 5350 4400
+Wire Notes Line
+	5350 4400 6000 4400
+Wire Notes Line
+	6000 4400 6000 3700
+Wire Notes Line
+	6000 3700 5350 3700
+Text Notes 6000 4200 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 3600 1400 3600
+Wire Notes Line
+	1400 4400 2250 4400
+Text Notes 1500 4150 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 2800 1400 2800
+Wire Notes Line
+	1400 3200 2250 3200
+Text Notes 1500 3550 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	1400 2800 1400 4400
+Wire Notes Line
+	2250 2800 2250 4400
+Text Notes 1500 3150 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 1350 1400 1350
+Wire Notes Line
+	1400 1350 1400 2000
+Wire Notes Line
+	1400 2000 2250 2000
+Wire Notes Line
+	2250 1350 2250 2000
+Text Notes 1500 1850 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	6000 2500 6000 2900
+Wire Notes Line
+	6000 2900 5350 2900
+Wire Notes Line
+	5350 2900 5350 2500
+Wire Notes Line
+	5350 2500 6000 2500
+Text Notes 6000 2850 1    50   ~ 0
+VDD_1V8
+Wire Wire Line
+	5350 3650 6200 3650
+Wire Wire Line
+	6200 3650 6200 3550
+Connection ~ 6200 3550
+Connection ~ 6200 3650
+Connection ~ 6200 2950
+Wire Wire Line
+	1200 2050 2250 2050
+Wire Wire Line
+	2250 2150 1200 2150
+Wire Wire Line
+	2250 2250 1200 2250
+Wire Wire Line
+	2250 2550 1200 2550
+Wire Wire Line
+	2250 2650 1200 2650
+Wire Wire Line
+	2250 2750 1200 2750
+$Comp
+L Connector_Generic:Conn_02x30_Counter_Clockwise J1
+U 1 1 5E5E1603
+P 2450 2850
+AR Path="/5E5E1603" Ref="J1"  Part="1" 
+AR Path="/5E34BAA5/5E5E1603" Ref="J?"  Part="1" 
+F 0 "J1" H 2500 4467 50  0000 C CNN
+F 1 "DF40HC(3.5)-60DS" H 2500 4376 50  0000 C CNN
+F 2 "kimchi_ulid:DF40HC(3.5)-60DS" H 2450 2850 50  0001 C CNN
+F 3 "~" H 2450 2850 50  0001 C CNN
+	1    2450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E5F10BC
+P 800 2050
+F 0 "#FLG0101" H 800 2125 50  0001 C CNN
+F 1 "PWR_FLAG" H 800 2223 50  0000 C CNN
+F 2 "" H 800 2050 50  0001 C CNN
+F 3 "~" H 800 2050 50  0001 C CNN
+	1    800  2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  2050 1200 2050
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E5F3411
+P 6650 1750
+F 0 "#FLG0102" H 6650 1825 50  0001 C CNN
+F 1 "PWR_FLAG" H 6650 1923 50  0000 C CNN
+F 2 "" H 6650 1750 50  0001 C CNN
+F 3 "~" H 6650 1750 50  0001 C CNN
+	1    6650 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1750 6200 1750
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5E5F4DE1
+P 6650 2950
+F 0 "#FLG0103" H 6650 3025 50  0001 C CNN
+F 1 "PWR_FLAG" H 6650 3123 50  0000 C CNN
+F 2 "" H 6650 2950 50  0001 C CNN
+F 3 "~" H 6650 2950 50  0001 C CNN
+	1    6650 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2950 6200 2950
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5E6294CA
+P 14050 1150
+F 0 "H1" H 14150 1199 50  0000 L CNN
+F 1 "MountingHole_Pad" H 14150 1108 50  0000 L CNN
+F 2 "kimchi_ulid:MountingHole_M2_Standoff" H 14150 1062 50  0001 L CNN
+F 3 "~" H 14050 1150 50  0001 C CNN
+F 4 "Würth" H 14050 1150 50  0001 C CNN "Mfgr"
+F 5 "9774035943R" H 14050 1150 50  0001 C CNN "Mfgrpart"
+	1    14050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5E62A27E
+P 14050 1650
+F 0 "H3" H 14150 1699 50  0000 L CNN
+F 1 "MountingHole_Pad" H 14150 1608 50  0000 L CNN
+F 2 "kimchi_ulid:MountingHole_M2_Standoff" H 14050 1650 50  0001 C CNN
+F 3 "~" H 14050 1650 50  0001 C CNN
+F 4 "Würth" H 14050 1650 50  0001 C CNN "Mfgr"
+F 5 "9774035943R" H 14050 1650 50  0001 C CNN "Mfgrpart"
+	1    14050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5E62A6D2
+P 15150 1150
+F 0 "H2" H 15250 1199 50  0000 L CNN
+F 1 "MountingHole_Pad" H 15250 1108 50  0000 L CNN
+F 2 "kimchi_ulid:MountingHole_M2_Standoff" H 15150 1150 50  0001 C CNN
+F 3 "~" H 15150 1150 50  0001 C CNN
+F 4 "Würth" H 15150 1150 50  0001 C CNN "Mfgr"
+F 5 "9774035943R" H 15150 1150 50  0001 C CNN "Mfgrpart"
+	1    15150 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5E62AAC7
+P 15150 1650
+F 0 "H4" H 15250 1699 50  0000 L CNN
+F 1 "MountingHole_Pad" H 15250 1608 50  0000 L CNN
+F 2 "kimchi_ulid:MountingHole_M2_Standoff" H 15150 1650 50  0001 C CNN
+F 3 "~" H 15150 1650 50  0001 C CNN
+F 4 "Würth" H 15150 1650 50  0001 C CNN "Mfgr"
+F 5 "9774035943R" H 15150 1650 50  0001 C CNN "Mfgrpart"
+	1    15150 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5E62AE37
+P 14050 1250
+F 0 "#PWR0108" H 14050 1000 50  0001 C CNN
+F 1 "GND" H 14055 1077 50  0000 C CNN
+F 2 "" H 14050 1250 50  0001 C CNN
+F 3 "" H 14050 1250 50  0001 C CNN
+	1    14050 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5E62F6CE
+P 14050 1750
+F 0 "#PWR0109" H 14050 1500 50  0001 C CNN
+F 1 "GND" H 14055 1577 50  0000 C CNN
+F 2 "" H 14050 1750 50  0001 C CNN
+F 3 "" H 14050 1750 50  0001 C CNN
+	1    14050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5E62F90F
+P 15150 1250
+F 0 "#PWR0110" H 15150 1000 50  0001 C CNN
+F 1 "GND" H 15155 1077 50  0000 C CNN
+F 2 "" H 15150 1250 50  0001 C CNN
+F 3 "" H 15150 1250 50  0001 C CNN
+	1    15150 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5E6301E3
+P 15150 1750
+F 0 "#PWR0111" H 15150 1500 50  0001 C CNN
+F 1 "GND" H 15155 1577 50  0000 C CNN
+F 2 "" H 15150 1750 50  0001 C CNN
+F 3 "" H 15150 1750 50  0001 C CNN
+	1    15150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0112
+U 1 1 5E5E1B2B
+P 11800 1150
+F 0 "#PWR0112" H 11800 1000 50  0001 C CNN
+F 1 "VDD_3V3" H 11815 1323 50  0000 C CNN
+F 2 "" H 11800 1150 50  0001 C CNN
+F 3 "" H 11800 1150 50  0001 C CNN
+	1    11800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0113
+U 1 1 5E5E1EC4
+P 11350 1450
+F 0 "#PWR0113" H 11350 1300 50  0001 C CNN
+F 1 "VDD_3V3" H 11365 1623 50  0000 C CNN
+F 2 "" H 11350 1450 50  0001 C CNN
+F 3 "" H 11350 1450 50  0001 C CNN
+	1    11350 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1850 3300 1950
+Connection ~ 3300 1850
+Wire Wire Line
+	3300 1850 2750 1850
+Wire Wire Line
+	3300 2150 2750 2150
+Wire Wire Line
+	3300 2050 2750 2050
+Connection ~ 3300 2050
+Wire Wire Line
+	3300 2050 3300 2150
+Wire Wire Line
+	3300 1950 2750 1950
+Connection ~ 3300 1950
+Wire Wire Line
+	3300 1950 3300 2050
+Wire Wire Line
+	3500 1850 3300 1850
+Text GLabel 3500 1850 2    50   BiDi ~ 0
+VCHG
+Text Notes 750  2200 0    50   ~ 0
+1.2A max
+Text Notes 6300 1900 0    50   ~ 0
+0.9A max
+Text Notes 3400 2050 0    50   ~ 0
+1.5A max
+Wire Wire Line
+	5350 2150 6200 2150
+Connection ~ 6200 2250
+Wire Wire Line
+	6200 2150 6200 2250
+Connection ~ 6200 3450
+Wire Wire Line
+	6200 3350 6200 3450
+Wire Wire Line
+	5350 3350 6200 3350
+Connection ~ 3300 2150
+Wire Wire Line
+	3300 2150 3300 2250
+Wire Wire Line
+	3300 2250 2750 2250
+NoConn ~ 2750 2350
+Text Notes 6300 3100 0    50   ~ 0
+0.9A max
+NoConn ~ 5350 2050
+NoConn ~ 5350 3250
+NoConn ~ 2250 2450
+Wire Wire Line
+	2250 2350 1200 2350
+Wire Wire Line
+	1200 2350 1200 2250
+Connection ~ 1200 2250
+Wire Notes Line
+	10650 500  10650 2500
+Wire Notes Line
+	10650 2500 13350 2500
+Wire Notes Line
+	13350 2500 13350 500 
+Wire Notes Line
+	13350 500  10650 500 
+Text Notes 10700 700  0    50   ~ 0
+EEPROM for lid identification (if needed)\nExpected on I2C4 @ 7-bit 0x57
+Wire Notes Line
+	13400 500  16500 500 
+Wire Notes Line
+	16500 500  16500 2450
+Wire Notes Line
+	16500 2450 13400 2450
+Wire Notes Line
+	13400 2450 13400 500 
+Text Notes 13450 850  0    50   ~ 0
+Recommend standoffs populated on lid\nMatch height of J1/J2 (typ. 3.5 mm)\nWürth WA-SMST 9774035943R (non-threaded)\nWürth WA-SMSI 9774035243R (threaded)
+NoConn ~ 5350 1650
+$Comp
+L kimchi_ulid:KIMCHI_MICRO K1
+U 1 1 60D1AF4A
+P 11050 10300
+F 0 "K1" H 11075 10346 50  0000 L CNN
+F 1 "KIMCHI_MICRO" H 11075 10255 50  0000 L CNN
+F 2 "kimchi_ulid:KIMCHI_MICRO" H 11050 10300 50  0001 C CNN
+F 3 "" H 11050 10300 50  0001 C CNN
+	1    11050 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x30_Counter_Clockwise J4
+U 1 1 60D90730
+P 5050 8000
+AR Path="/60D90730" Ref="J4"  Part="1" 
+AR Path="/5E34BAA5/60D90730" Ref="J?"  Part="1" 
+F 0 "J4" H 5100 9617 50  0000 C CNN
+F 1 "DF40C-60DP" H 5100 9526 50  0000 C CNN
+F 2 "kimchi_ulid:DF40C-60DP" H 5050 8000 50  0001 C CNN
+F 3 "~" H 5050 8000 50  0001 C CNN
+F 4 "H11628CT-ND" H 5050 8000 50  0001 C CNN "Vendorpart"
+F 5 "Hirose" H 5050 8000 50  0001 C CNN "Mfgr"
+F 6 "DF40C-60DP-0.4V(51)" H 5050 6350 50  0000 C CNN "Mfgrpart"
+	1    5050 8000
+	1    0    0    -1  
+$EndComp
+Text Label 2750 9100 0    50   ~ 0
+DISP_CK_N
+Text Label 2750 9000 0    50   ~ 0
+DISP_CK_P
+Text Label 2750 9500 0    50   ~ 0
+DISP_D0_N
+Text Label 2750 9400 0    50   ~ 0
+DISP_D0_P
+Text Label 2750 9300 0    50   ~ 0
+DISP_D1_N
+Text Label 2750 9200 0    50   ~ 0
+DISP_D1_P
+Text Label 2750 8900 0    50   ~ 0
+DISP_D2_N
+Text Label 2750 8800 0    50   ~ 0
+DISP_D2_P
+Text Label 2750 8700 0    50   ~ 0
+DISP_D3_N
+Text Label 2750 8600 0    50   ~ 0
+DISP_D3_P
+Text GLabel 2750 6900 2    50   Input ~ 0
+USB2_VBUS
+Text GLabel 2750 6700 2    50   Input ~ 0
+USB2_DN
+Text GLabel 2750 6600 2    50   Input ~ 0
+USB2_DP
+Text GLabel 2750 6800 2    50   Input ~ 0
+USB2_ID
+Text Label 4850 6700 2    50   ~ 0
+ENET_MDC
+Text Label 4850 6600 2    50   ~ 0
+ENET_MDIO
+Text Label 4850 7800 2    50   ~ 0
+ENET_TX_CTL
+Text Label 4850 7900 2    50   ~ 0
+ENET_TXC
+Text Label 4850 7500 2    50   ~ 0
+ENET_TD0
+Text Label 4850 7400 2    50   ~ 0
+ENET_TD1
+Text Label 4850 7700 2    50   ~ 0
+ENET_TD2
+Text Label 4850 7600 2    50   ~ 0
+ENET_TD3
+Text Label 4850 7300 2    50   ~ 0
+ENET_RX_CTL
+Text Label 4850 7200 2    50   ~ 0
+ENET_RXC
+Text Label 4850 7100 2    50   ~ 0
+ENET_RD0
+Text Label 4850 6900 2    50   ~ 0
+ENET_RD1
+Text Label 4850 7000 2    50   ~ 0
+ENET_RD2
+Text Label 4850 6800 2    50   ~ 0
+ENET_RD3
+Text Label 2250 6900 2    50   ~ 0
+USDHC3_DATA0
+Text Label 2250 7100 2    50   ~ 0
+USDHC3_DATA2
+Text Label 2250 7000 2    50   ~ 0
+USDHC3_DATA1
+Text GLabel 2250 9200 0    50   Input ~ 0
+ECSPI2_SCLK
+Text GLabel 2250 9500 0    50   Input ~ 0
+ECSPI2_MISO
+Text GLabel 2250 9400 0    50   Input ~ 0
+ECSPI2_MOSI
+Text GLabel 2250 9300 0    50   Input ~ 0
+ECSPI2_SS0
+Text GLabel 2250 8800 0    50   Input ~ 0
+ECSPI1_SCLK
+Text GLabel 2250 9100 0    50   Input ~ 0
+ECSPI1_MISO
+Text GLabel 2250 9000 0    50   Input ~ 0
+ECSPI1_MOSI
+Text GLabel 2250 8900 0    50   Input ~ 0
+ECSPI1_SS0
+Text GLabel 2250 8700 0    50   Input ~ 0
+I2C1_SCL
+Text GLabel 2250 8600 0    50   Input ~ 0
+I2C1_SDA
+Text GLabel 2250 8400 0    50   Input ~ 0
+I2C2_SDA
+Text GLabel 2250 8200 0    50   Input ~ 0
+I2C3_SDA
+Text GLabel 2250 8000 0    50   Input ~ 0
+I2C4_SDA
+Text GLabel 2250 8500 0    50   Input ~ 0
+I2C2_SCL
+Text GLabel 2250 8300 0    50   Input ~ 0
+I2C3_SCL
+Text GLabel 2250 8100 0    50   Input ~ 0
+I2C4_SCL
+$Comp
+L kimchi_ulid:VDD_5V #PWR0101
+U 1 1 60D9076F
+P 1200 7200
+F 0 "#PWR0101" H 1200 7050 50  0001 C CNN
+F 1 "VDD_5V" H 1215 7373 50  0000 C CNN
+F 2 "" H 1200 7200 50  0001 C CNN
+F 3 "" H 1200 7200 50  0001 C CNN
+	1    1200 7200
+	1    0    0    -1  
+$EndComp
+Connection ~ 1200 7200
+Wire Wire Line
+	1200 7400 1200 7300
+Connection ~ 1200 7300
+Wire Wire Line
+	1200 7300 1200 7200
+$Comp
+L power:GND #PWR0114
+U 1 1 60D90779
+P 1200 7900
+F 0 "#PWR0114" H 1200 7650 50  0001 C CNN
+F 1 "GND" H 1205 7727 50  0000 C CNN
+F 2 "" H 1200 7900 50  0001 C CNN
+F 3 "" H 1200 7900 50  0001 C CNN
+	1    1200 7900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 7800 1200 7900
+Connection ~ 1200 7900
+Wire Wire Line
+	1200 7700 1200 7800
+Connection ~ 1200 7800
+$Comp
+L kimchi_ulid:VDD_1V8 #PWR0115
+U 1 1 60D90783
+P 6200 8100
+F 0 "#PWR0115" H 6200 7950 50  0001 C CNN
+F 1 "VDD_1V8" H 6215 8273 50  0000 C CNN
+F 2 "" H 6200 8100 50  0001 C CNN
+F 3 "" H 6200 8100 50  0001 C CNN
+	1    6200 8100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 8300 5350 8300
+Wire Wire Line
+	5350 8200 6200 8200
+Connection ~ 6200 8200
+Wire Wire Line
+	6200 8200 6200 8300
+Wire Wire Line
+	6200 8100 5350 8100
+Wire Wire Line
+	6200 8100 6200 8200
+Text GLabel 5350 6600 2    50   Input ~ 0
+PCIE_USB_D_N
+Text GLabel 5350 6700 2    50   Input ~ 0
+PCIE_USB_D_P
+Text GLabel 5350 7800 2    50   Input ~ 0
+UART3_TX
+Text GLabel 5350 7700 2    50   Input ~ 0
+UART3_RX
+Text GLabel 5350 7900 2    50   Input ~ 0
+UART1_RX
+Text GLabel 5350 8000 2    50   Input ~ 0
+UART1_TX
+Text GLabel 4850 9300 0    50   Input ~ 0
+GPIO1[9]
+Text GLabel 4850 9100 0    50   Input ~ 0
+GPIO1[11]
+Text GLabel 4850 8800 0    50   Input ~ 0
+GPIO1[14]
+Text GLabel 4850 8700 0    50   Input ~ 0
+GPIO1[15]
+$Comp
+L power:GND #PWR0116
+U 1 1 60D90799
+P 6200 8800
+F 0 "#PWR0116" H 6200 8550 50  0001 C CNN
+F 1 "GND" H 6205 8627 50  0000 C CNN
+F 2 "" H 6200 8800 50  0001 C CNN
+F 3 "" H 6200 8800 50  0001 C CNN
+	1    6200 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 8700 6200 8700
+Wire Wire Line
+	5350 8600 6200 8600
+Wire Wire Line
+	6200 8600 6200 8700
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0117
+U 1 1 60D907A2
+P 6200 6900
+F 0 "#PWR0117" H 6200 6750 50  0001 C CNN
+F 1 "VDD_3V3" H 6215 7073 50  0000 C CNN
+F 2 "" H 6200 6900 50  0001 C CNN
+F 3 "" H 6200 6900 50  0001 C CNN
+	1    6200 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 6900 5350 6900
+Wire Wire Line
+	6200 6900 6200 7000
+Wire Wire Line
+	6200 7000 5350 7000
+Connection ~ 6200 6900
+Wire Wire Line
+	5350 7100 6200 7100
+Wire Wire Line
+	6200 7100 6200 7000
+Connection ~ 6200 7000
+$Comp
+L power:GND #PWR0118
+U 1 1 60D907AF
+P 6200 7600
+F 0 "#PWR0118" H 6200 7350 50  0001 C CNN
+F 1 "GND" H 6205 7427 50  0000 C CNN
+F 2 "" H 6200 7600 50  0001 C CNN
+F 3 "" H 6200 7600 50  0001 C CNN
+	1    6200 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 7400 5350 7400
+Wire Wire Line
+	5350 7500 6200 7500
+Connection ~ 6200 7500
+Wire Wire Line
+	6200 7500 6200 7400
+Connection ~ 6200 7600
+Wire Wire Line
+	6200 7600 6200 7500
+Wire Wire Line
+	5350 7600 6200 7600
+Text GLabel 5350 8900 2    50   Input ~ 0
+SAI3_MCLK
+Text GLabel 5350 9400 2    50   Input ~ 0
+SAI3_TXD
+Text GLabel 5350 9500 2    50   Input ~ 0
+SAI3_TXC
+Text GLabel 5350 9000 2    50   Input ~ 0
+SAI3_TXFS
+Text GLabel 5350 9300 2    50   Input ~ 0
+SAI3_RXD
+Text GLabel 5350 9100 2    50   Input ~ 0
+SAI3_RXC
+Text GLabel 5350 9200 2    50   Input ~ 0
+SAI3_RXFS
+Text GLabel 4850 8500 0    50   Input ~ 0
+SAI2_MCLK
+Text GLabel 4850 8300 0    50   Input ~ 0
+SAI2_TXD0
+Text GLabel 4850 8400 0    50   Input ~ 0
+SAI2_TXC
+Text GLabel 4850 8100 0    50   Input ~ 0
+SAI2_TXFS
+Text GLabel 4850 8000 0    50   Input ~ 0
+SAI2_RXD0
+Text GLabel 4850 8200 0    50   Input ~ 0
+SAI2_RXC
+Text GLabel 4850 8600 0    50   Input ~ 0
+SAI2_RXFS
+Text GLabel 4850 9500 0    50   Input ~ 0
+GPIO1[0]
+Text GLabel 4850 9400 0    50   Input ~ 0
+GPIO1[1]
+Text GLabel 4850 9200 0    50   Input ~ 0
+GPIO1[10]
+Text GLabel 4850 9000 0    50   Input ~ 0
+GPIO1[12]
+Text GLabel 4850 8900 0    50   Input ~ 0
+GPIO1[13]
+Text Label 2250 6600 2    50   ~ 0
+USDHC3_CMD
+Text Label 2250 6700 2    50   ~ 0
+USDHC3_CLK
+Text Label 2250 6800 2    50   ~ 0
+USDHC3_DATA3
+Wire Notes Line
+	4150 7950 4850 7950
+Wire Notes Line
+	4850 7950 4850 9550
+Wire Notes Line
+	4850 9550 4150 9550
+Wire Notes Line
+	4150 9550 4150 7950
+Text Notes 4250 8900 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	5350 8850 5350 9550
+Wire Notes Line
+	5350 9550 6000 9550
+Wire Notes Line
+	6000 9550 6000 8850
+Wire Notes Line
+	6000 8850 5350 8850
+Text Notes 6000 9350 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 8750 1400 8750
+Wire Notes Line
+	1400 9550 2250 9550
+Text Notes 1500 9300 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 7950 1400 7950
+Wire Notes Line
+	1400 8350 2250 8350
+Text Notes 1500 8700 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	1400 7950 1400 9550
+Wire Notes Line
+	2250 7950 2250 9550
+Text Notes 1500 8300 1    50   ~ 0
+VDD_3V3
+Wire Notes Line
+	2250 6500 1400 6500
+Wire Notes Line
+	1400 6500 1400 7150
+Wire Notes Line
+	1400 7150 2250 7150
+Wire Notes Line
+	2250 6500 2250 7150
+Text Notes 1500 7000 1    50   ~ 0
+VDD_1V8
+Wire Notes Line
+	6000 7650 6000 8050
+Wire Notes Line
+	6000 8050 5350 8050
+Wire Notes Line
+	5350 8050 5350 7650
+Wire Notes Line
+	5350 7650 6000 7650
+Text Notes 6000 8000 1    50   ~ 0
+VDD_1V8
+Wire Wire Line
+	5350 8800 6200 8800
+Wire Wire Line
+	6200 8800 6200 8700
+Connection ~ 6200 8700
+Connection ~ 6200 8800
+Connection ~ 6200 8100
+Wire Wire Line
+	1200 7200 2250 7200
+Wire Wire Line
+	2250 7300 1200 7300
+Wire Wire Line
+	2250 7400 1200 7400
+Wire Wire Line
+	2250 7700 1200 7700
+Wire Wire Line
+	2250 7800 1200 7800
+Wire Wire Line
+	2250 7900 1200 7900
+$Comp
+L Connector_Generic:Conn_02x30_Counter_Clockwise J3
+U 1 1 60D907FA
+P 2450 8000
+AR Path="/60D907FA" Ref="J3"  Part="1" 
+AR Path="/5E34BAA5/60D907FA" Ref="J?"  Part="1" 
+F 0 "J3" H 2500 9617 50  0000 C CNN
+F 1 "DF40C-60DP" H 2500 9526 50  0000 C CNN
+F 2 "kimchi_ulid:DF40C-60DP" H 2450 8000 50  0001 C CNN
+F 3 "~" H 2450 8000 50  0001 C CNN
+F 4 "H11628CT-ND" H 2450 8000 50  0001 C CNN "Vendorpart"
+F 5 "Hirose" H 2450 8000 50  0001 C CNN "Mfgr"
+F 6 "DF40C-60DP-0.4V(51)" H 2450 6350 50  0000 C CNN "Mfgrpart"
+	1    2450 8000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 7000 3300 7100
+Connection ~ 3300 7000
+Wire Wire Line
+	3300 7000 2750 7000
+Wire Wire Line
+	3300 7300 2750 7300
+Wire Wire Line
+	3300 7200 2750 7200
+Connection ~ 3300 7200
+Wire Wire Line
+	3300 7200 3300 7300
+Wire Wire Line
+	3300 7100 2750 7100
+Connection ~ 3300 7100
+Wire Wire Line
+	3300 7100 3300 7200
+Wire Wire Line
+	3500 7000 3300 7000
+Text GLabel 3500 7000 2    50   BiDi ~ 0
+VCHG
+Text Notes 3400 7200 0    50   ~ 0
+1.5A max
+Wire Wire Line
+	5350 7300 6200 7300
+Connection ~ 6200 7400
+Wire Wire Line
+	6200 7300 6200 7400
+Connection ~ 6200 8600
+Wire Wire Line
+	6200 8500 6200 8600
+Wire Wire Line
+	5350 8500 6200 8500
+Connection ~ 3300 7300
+Wire Wire Line
+	3300 7300 3300 7400
+Wire Wire Line
+	3300 7400 2750 7400
+NoConn ~ 2750 7500
+NoConn ~ 5350 7200
+NoConn ~ 5350 8400
+NoConn ~ 2250 7600
+Wire Wire Line
+	2250 7500 1200 7500
+Wire Wire Line
+	1200 7500 1200 7400
+Connection ~ 1200 7400
+NoConn ~ 5350 6800
+$Comp
+L Connector_Generic_MountingPin:Conn_01x15_MountingPin J5
+U 1 1 60E5D78D
+P 9950 5350
+F 0 "J5" H 10038 5314 50  0000 L CNN
+F 1 "Conn_01x15_MountingPin" H 10038 5223 50  0000 L CNN
+F 2 "Connector_FFC-FPC:TE_1-84952-5_1x15-1MP_P1.0mm_Horizontal" H 9950 5350 50  0001 C CNN
+F 3 "~" H 9950 5350 50  0001 C CNN
+F 4 "TE Connectivity" H 9950 5350 50  0001 C CNN "Mfgr"
+F 5 "1-84952-5" H 10300 5100 50  0000 C CNN "Mfgrpart"
+	1    9950 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic_MountingPin:Conn_01x22_MountingPin J7
+U 1 1 60E5F23D
+P 12800 6100
+F 0 "J7" H 12888 6014 50  0000 L CNN
+F 1 "Conn_01x22_MountingPin" H 12888 5923 50  0000 L CNN
+F 2 "Connector_FFC-FPC:TE_2-1734839-2_1x22-1MP_P0.5mm_Horizontal" H 12800 6100 50  0001 C CNN
+F 3 "~" H 12800 6100 50  0001 C CNN
+F 4 "TE Connectivity" H 12800 6100 50  0001 C CNN "Mfgr"
+F 5 "2-1734839-2" H 13200 5800 50  0000 C CNN "Mfgrpart"
+	1    12800 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic_MountingPin:Conn_01x15_MountingPin J6
+U 1 1 60E622AE
+P 9950 7350
+F 0 "J6" H 10038 7314 50  0000 L CNN
+F 1 "Conn_01x15_MountingPin" H 10038 7223 50  0000 L CNN
+F 2 "Connector_FFC-FPC:TE_1-84952-5_1x15-1MP_P1.0mm_Horizontal" H 9950 7350 50  0001 C CNN
+F 3 "~" H 9950 7350 50  0001 C CNN
+F 4 "TE Connectivity" H 9950 7350 50  0001 C CNN "Mfgr"
+F 5 "1-84952-5" H 10300 7100 50  0000 C CNN "Mfgrpart"
+	1    9950 7350
+	1    0    0    -1  
+$EndComp
+Text Label 9750 4750 2    50   ~ 0
+CAM_D0_N
+Text Label 9750 4850 2    50   ~ 0
+CAM_D0_P
+Text Label 9750 5050 2    50   ~ 0
+CAM_D1_N
+Text Label 9750 5150 2    50   ~ 0
+CAM_D1_P
+$Comp
+L power:GND #PWR0119
+U 1 1 60D9EB9D
+P 9100 5750
+F 0 "#PWR0119" H 9100 5500 50  0001 C CNN
+F 1 "GND" H 9105 5577 50  0000 C CNN
+F 2 "" H 9100 5750 50  0001 C CNN
+F 3 "" H 9100 5750 50  0001 C CNN
+	1    9100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 60D9EBF6
+P 9950 6250
+F 0 "#PWR0120" H 9950 6000 50  0001 C CNN
+F 1 "GND" H 9955 6077 50  0000 C CNN
+F 2 "" H 9950 6250 50  0001 C CNN
+F 3 "" H 9950 6250 50  0001 C CNN
+	1    9950 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 4650 9100 4650
+Wire Wire Line
+	9100 4650 9100 4950
+Wire Wire Line
+	9750 4950 9100 4950
+Connection ~ 9100 4950
+Wire Wire Line
+	9100 4950 9100 5250
+Wire Wire Line
+	9750 5250 9100 5250
+Connection ~ 9100 5250
+Wire Wire Line
+	9100 5250 9100 5550
+Wire Wire Line
+	9750 5550 9100 5550
+Connection ~ 9100 5550
+Wire Wire Line
+	9100 5550 9100 5750
+Text Label 9750 7350 2    50   ~ 0
+CAM_CK_N
+Text Label 9750 7450 2    50   ~ 0
+CAM_CK_P
+$Comp
+L power:GND #PWR0121
+U 1 1 60DBD58D
+P 9100 7700
+F 0 "#PWR0121" H 9100 7450 50  0001 C CNN
+F 1 "GND" H 9105 7527 50  0000 C CNN
+F 2 "" H 9100 7700 50  0001 C CNN
+F 3 "" H 9100 7700 50  0001 C CNN
+	1    9100 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 6650 9100 6650
+Wire Wire Line
+	9100 6650 9100 6950
+Wire Wire Line
+	9750 6950 9100 6950
+Connection ~ 9100 6950
+Wire Wire Line
+	9100 6950 9100 7250
+Wire Wire Line
+	9750 7250 9100 7250
+Connection ~ 9100 7250
+Wire Wire Line
+	9100 7250 9100 7550
+Wire Wire Line
+	9750 7550 9100 7550
+Connection ~ 9100 7550
+Wire Wire Line
+	9100 7550 9100 7700
+$Comp
+L power:GND #PWR0122
+U 1 1 60DC2151
+P 9950 8250
+F 0 "#PWR0122" H 9950 8000 50  0001 C CNN
+F 1 "GND" H 9955 8077 50  0000 C CNN
+F 2 "" H 9950 8250 50  0001 C CNN
+F 3 "" H 9950 8250 50  0001 C CNN
+	1    9950 8250
+	1    0    0    -1  
+$EndComp
+Text Label 12600 5800 2    50   ~ 0
+CAM_CK_N
+Text Label 12600 5900 2    50   ~ 0
+CAM_CK_P
+Text Label 9750 6750 2    50   ~ 0
+CAM_D2_N
+Text Label 9750 6850 2    50   ~ 0
+CAM_D2_P
+Text Label 9750 7050 2    50   ~ 0
+CAM_D3_N
+Text Label 9750 7150 2    50   ~ 0
+CAM_D3_P
+Text GLabel 9750 5950 0    50   Input ~ 0
+I2C3_SDA
+Text GLabel 9750 5850 0    50   Input ~ 0
+I2C3_SCL
+Text GLabel 9750 7950 0    50   Input ~ 0
+I2C4_SDA
+Text GLabel 9750 7850 0    50   Input ~ 0
+I2C4_SCL
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0123
+U 1 1 60DFBABF
+P 8750 7900
+F 0 "#PWR0123" H 8750 7750 50  0001 C CNN
+F 1 "VDD_3V3" H 8765 8073 50  0000 C CNN
+F 2 "" H 8750 7900 50  0001 C CNN
+F 3 "" H 8750 7900 50  0001 C CNN
+	1    8750 7900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 7900 8750 8050
+Wire Wire Line
+	8750 8050 9750 8050
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0124
+U 1 1 60E02A2A
+P 8750 5900
+F 0 "#PWR0124" H 8750 5750 50  0001 C CNN
+F 1 "VDD_3V3" H 8765 6073 50  0000 C CNN
+F 2 "" H 8750 5900 50  0001 C CNN
+F 3 "" H 8750 5900 50  0001 C CNN
+	1    8750 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 5900 8750 6050
+Wire Wire Line
+	8750 6050 9750 6050
+Text GLabel 8500 2800 0    50   Input ~ 0
+SAI3_MCLK
+Text Label 8750 2800 0    50   ~ 0
+GPIO5[2]
+Wire Wire Line
+	8750 2800 8500 2800
+Text GLabel 8500 2900 0    50   Input ~ 0
+SAI3_TXFS
+Wire Wire Line
+	8750 2900 8500 2900
+Text Label 8750 2900 0    50   ~ 0
+GPIO4[31]
+Text Label 9750 5650 2    50   ~ 0
+GPIO5[2]
+Text Label 9750 5750 2    50   ~ 0
+GPIO4[31]
+Text GLabel 8500 3100 0    50   Input ~ 0
+SAI3_RXC
+Text Label 8750 3100 0    50   ~ 0
+GPIO4[29]
+Wire Wire Line
+	8750 3100 8500 3100
+Text GLabel 8500 3200 0    50   Input ~ 0
+SAI3_RXFS
+Wire Wire Line
+	8750 3200 8500 3200
+Text Label 8750 3200 0    50   ~ 0
+GPIO4[28]
+Text Label 9750 7650 2    50   ~ 0
+GPIO4[29]
+Text Label 9750 7750 2    50   ~ 0
+GPIO4[28]
+$Comp
+L power:GND #PWR0125
+U 1 1 60E42A75
+P 12800 7400
+F 0 "#PWR0125" H 12800 7150 50  0001 C CNN
+F 1 "GND" H 12805 7227 50  0000 C CNN
+F 2 "" H 12800 7400 50  0001 C CNN
+F 3 "" H 12800 7400 50  0001 C CNN
+	1    12800 7400
+	1    0    0    -1  
+$EndComp
+Text Label 12600 5200 2    50   ~ 0
+CAM_D0_N
+Text Label 12600 5300 2    50   ~ 0
+CAM_D0_P
+Text Label 12600 5500 2    50   ~ 0
+CAM_D1_N
+Text Label 12600 5600 2    50   ~ 0
+CAM_D1_P
+Text Label 12600 6400 2    50   ~ 0
+CAM_D3_N
+Text Label 12600 6500 2    50   ~ 0
+CAM_D3_P
+Text Label 12600 6100 2    50   ~ 0
+CAM_D2_N
+Text Label 12600 6200 2    50   ~ 0
+CAM_D2_P
+Text Label 9750 5350 2    50   ~ 0
+CAM_CK_N
+Text Label 9750 5450 2    50   ~ 0
+CAM_CK_P
+Text Label 12600 6700 2    50   ~ 0
+GPIO5[2]
+Text Label 12600 6800 2    50   ~ 0
+GPIO4[31]
+Text GLabel 12600 7100 0    50   Input ~ 0
+I2C3_SDA
+Text GLabel 12600 7000 0    50   Input ~ 0
+I2C3_SCL
+$Comp
+L kimchi_ulid:VDD_3V3 #PWR0126
+U 1 1 60E71168
+P 11600 7050
+F 0 "#PWR0126" H 11600 6900 50  0001 C CNN
+F 1 "VDD_3V3" H 11615 7223 50  0000 C CNN
+F 2 "" H 11600 7050 50  0001 C CNN
+F 3 "" H 11600 7050 50  0001 C CNN
+	1    11600 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11600 7050 11600 7200
+Wire Wire Line
+	11600 7200 12600 7200
+$Comp
+L power:GND #PWR0127
+U 1 1 60E77C68
+P 11950 6900
+F 0 "#PWR0127" H 11950 6650 50  0001 C CNN
+F 1 "GND" H 11955 6727 50  0000 C CNN
+F 2 "" H 11950 6900 50  0001 C CNN
+F 3 "" H 11950 6900 50  0001 C CNN
+	1    11950 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12600 5100 11950 5100
+Wire Wire Line
+	11950 5100 11950 5400
+Wire Wire Line
+	12600 5400 11950 5400
+Connection ~ 11950 5400
+Wire Wire Line
+	11950 5400 11950 5700
+Wire Wire Line
+	12600 5700 11950 5700
+Connection ~ 11950 5700
+Wire Wire Line
+	11950 5700 11950 6000
+Wire Wire Line
+	12600 6000 11950 6000
+Connection ~ 11950 6000
+Wire Wire Line
+	12600 6300 11950 6300
+Wire Wire Line
+	11950 6000 11950 6300
+Connection ~ 11950 6300
+Wire Wire Line
+	11950 6300 11950 6600
+Wire Wire Line
+	12600 6600 11950 6600
+Connection ~ 11950 6600
+Wire Wire Line
+	11950 6600 11950 6900
+Wire Wire Line
+	12600 6900 11950 6900
+Connection ~ 11950 6900
+NoConn ~ 2750 7600
+NoConn ~ 2750 7700
+NoConn ~ 2750 7800
+NoConn ~ 2750 7900
+NoConn ~ 2750 8000
+NoConn ~ 2750 8100
+NoConn ~ 2750 8200
+NoConn ~ 2750 8300
+NoConn ~ 2750 8400
+NoConn ~ 2750 8500
+$Comp
+L Device:C C1
+U 1 1 60FC0D8E
+P 8750 6200
+F 0 "C1" H 8865 6246 50  0000 L CNN
+F 1 "4.7uF X5R 6.3V" H 8865 6155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8788 6050 50  0001 C CNN
+F 3 "~" H 8750 6200 50  0001 C CNN
+F 4 "Samsung" H 8750 6200 50  0001 C CNN "Mfgr"
+F 5 "CL10A475KQ8NNNC" H 8750 6200 50  0001 C CNN "Mfgrpart"
+	1    8750 6200
+	1    0    0    -1  
+$EndComp
+Connection ~ 8750 6050
+$Comp
+L power:GND #PWR0128
+U 1 1 60FC13E6
+P 8750 6350
+F 0 "#PWR0128" H 8750 6100 50  0001 C CNN
+F 1 "GND" H 8755 6177 50  0000 C CNN
+F 2 "" H 8750 6350 50  0001 C CNN
+F 3 "" H 8750 6350 50  0001 C CNN
+	1    8750 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60FC1FB8
+P 8750 8200
+F 0 "C2" H 8865 8246 50  0000 L CNN
+F 1 "4.7uF X5R 6.3V" H 8865 8155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8788 8050 50  0001 C CNN
+F 3 "~" H 8750 8200 50  0001 C CNN
+F 4 "Samsung" H 8750 8200 50  0001 C CNN "Mfgr"
+F 5 "CL10A475KQ8NNNC" H 8750 8200 50  0001 C CNN "Mfgrpart"
+	1    8750 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 60FC1FC2
+P 8750 8350
+F 0 "#PWR0129" H 8750 8100 50  0001 C CNN
+F 1 "GND" H 8755 8177 50  0000 C CNN
+F 2 "" H 8750 8350 50  0001 C CNN
+F 3 "" H 8750 8350 50  0001 C CNN
+	1    8750 8350
+	1    0    0    -1  
+$EndComp
+Connection ~ 8750 8050
+$Comp
+L Device:C C3
+U 1 1 60FC936D
+P 11600 7350
+F 0 "C3" H 11715 7396 50  0000 L CNN
+F 1 "4.7uF X5R 6.3V" H 11715 7305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11638 7200 50  0001 C CNN
+F 3 "~" H 11600 7350 50  0001 C CNN
+F 4 "Samsung" H 11600 7350 50  0001 C CNN "Mfgr"
+F 5 "CL10A475KQ8NNNC" H 11600 7350 50  0001 C CNN "Mfgrpart"
+	1    11600 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 60FC9377
+P 11600 7500
+F 0 "#PWR0130" H 11600 7250 50  0001 C CNN
+F 1 "GND" H 11605 7327 50  0000 C CNN
+F 2 "" H 11600 7500 50  0001 C CNN
+F 3 "" H 11600 7500 50  0001 C CNN
+	1    11600 7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 11600 7200
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 61040818
+P 13600 3150
+F 0 "J8" H 13680 3142 50  0000 L CNN
+F 1 "Conn_01x02" H 13680 3051 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 13600 3150 50  0001 C CNN
+F 3 "~" H 13600 3150 50  0001 C CNN
+	1    13600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 61047EA5
+P 13300 3450
+F 0 "#PWR0131" H 13300 3200 50  0001 C CNN
+F 1 "GND" H 13305 3277 50  0000 C CNN
+F 2 "" H 13300 3450 50  0001 C CNN
+F 3 "" H 13300 3450 50  0001 C CNN
+	1    13300 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13300 3450 13300 3250
+Wire Wire Line
+	13300 3250 13400 3250
+$Comp
+L Diode:PMEG1020EH D1
+U 1 1 6103F8BC
+P 12450 3150
+F 0 "D1" H 12450 3366 50  0000 C CNN
+F 1 "PMEG1020EH" H 12450 3275 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 12450 2975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf" H 12450 3150 50  0001 C CNN
+	1    12450 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 12800 3150
+Wire Wire Line
+	12800 3150 13400 3150
+Wire Wire Line
+	12600 3150 12800 3150
+$Comp
+L power:GND #PWR0132
+U 1 1 6105F9F3
+P 12800 3450
+F 0 "#PWR0132" H 12800 3200 50  0001 C CNN
+F 1 "GND" H 12805 3277 50  0000 C CNN
+F 2 "" H 12800 3450 50  0001 C CNN
+F 3 "" H 12800 3450 50  0001 C CNN
+	1    12800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 6105EAEA
+P 12800 3300
+F 0 "C4" H 12915 3346 50  0000 L CNN
+F 1 "22uF X5R 6.3V" H 12915 3255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 12838 3150 50  0001 C CNN
+F 3 "~" H 12800 3300 50  0001 C CNN
+F 4 "Murata" H 12800 3300 50  0001 C CNN "Mfgr"
+F 5 "GRT31CR60J226KE01L" H 12800 3300 50  0001 C CNN "Mfgrpart"
+	1    12800 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 12300 3150 0    50   BiDi ~ 0
+VCHG
+$Comp
+L kimchi_ulid:GG_LOGO L1
+U 1 1 610C3B53
+P 10550 10300
+F 0 "L1" H 10600 10345 50  0000 L CNN
+F 1 "GG_LOGO" H 10600 10254 50  0000 L CNN
+F 2 "kimchi_ulid:gg-4x4" H 10550 10300 50  0001 C CNN
+F 3 "" H 10550 10300 50  0001 C CNN
+	1    10550 10300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
