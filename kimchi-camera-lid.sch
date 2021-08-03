@@ -56,8 +56,9 @@ F 1 "24C32" H 11800 2090 50  0000 C CNN
 F 2 "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.36x1.46mm" H 11800 1700 50  0001 C CNN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/80/4e/8c/54/f2/63/4c/4a/CD00001012.pdf/files/CD00001012.pdf/jcr:content/translations/en.CD00001012.pdf" H 11800 1700 50  0001 C CNN
 F 4 "ST" H 11800 1700 50  0001 C CNN "Mfgr"
-F 5 "M24C32-FMC6TG" H 11800 1700 50  0001 C CNN "Part"
+F 5 "" H 11800 1700 50  0001 C CNN "Part"
 F 6 "497-15757-1-ND" H 11800 1700 50  0001 C CNN "Vendorpart"
+F 7 "M24C32-FMC6TG" H 11800 1700 50  0001 C CNN "Mfgrpart"
 	1    11800 1700
 	1    0    0    -1  
 $EndComp
@@ -89,6 +90,7 @@ F 0 "LOGO1" H 12000 10575 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Small" H 12000 10075 50  0001 C CNN
 F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 12000 10300 50  0001 C CNN
 F 3 "~" H 12000 10300 50  0001 C CNN
+F 4 "DNP" H 12000 10300 50  0001 C CNN "Populate"
 	1    12000 10300
 	1    0    0    -1  
 $EndComp
@@ -102,6 +104,9 @@ F 0 "J2" H 5100 4467 50  0000 C CNN
 F 1 "DF40HC(3.5)-60DS" H 5100 4376 50  0000 C CNN
 F 2 "kimchi_ulid:DF40HC(3.5)-60DS" H 5050 2850 50  0001 C CNN
 F 3 "~" H 5050 2850 50  0001 C CNN
+F 4 "Hirose" H 5050 2850 50  0001 C CNN "Mfgr"
+F 5 "DF40HC(3.5)-60DS-0.4V(51)" H 5050 2850 50  0001 C CNN "Mfgrpart"
+F 6 "H11917CT-ND" H 5050 2850 50  0001 C CNN "Vendorpart"
 	1    5050 2850
 	1    0    0    -1  
 $EndComp
@@ -480,19 +485,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 2750 1200 2750
 $Comp
-L Connector_Generic:Conn_02x30_Counter_Clockwise J1
-U 1 1 5E5E1603
-P 2450 2850
-AR Path="/5E5E1603" Ref="J1"  Part="1" 
-AR Path="/5E34BAA5/5E5E1603" Ref="J?"  Part="1" 
-F 0 "J1" H 2500 4467 50  0000 C CNN
-F 1 "DF40HC(3.5)-60DS" H 2500 4376 50  0000 C CNN
-F 2 "kimchi_ulid:DF40HC(3.5)-60DS" H 2450 2850 50  0001 C CNN
-F 3 "~" H 2450 2850 50  0001 C CNN
-	1    2450 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5E5F10BC
 P 800 2050
@@ -691,12 +683,8 @@ Wire Wire Line
 	3300 2150 3300 2250
 Wire Wire Line
 	3300 2250 2750 2250
-NoConn ~ 2750 2350
 Text Notes 6300 3100 0    50   ~ 0
 0.9A max
-NoConn ~ 5350 2050
-NoConn ~ 5350 3250
-NoConn ~ 2250 2450
 Wire Wire Line
 	2250 2350 1200 2350
 Wire Wire Line
@@ -722,20 +710,20 @@ Wire Notes Line
 	13400 2450 13400 500 
 Text Notes 13450 850  0    50   ~ 0
 Recommend standoffs populated on lid\nMatch height of J1/J2 (typ. 3.5 mm)\nWürth WA-SMST 9774035943R (non-threaded)\nWürth WA-SMSI 9774035243R (threaded)
-NoConn ~ 5350 1650
 $Comp
 L kimchi_ulid:KIMCHI_MICRO K1
 U 1 1 60D1AF4A
-P 11050 10300
-F 0 "K1" H 11075 10346 50  0000 L CNN
-F 1 "KIMCHI_MICRO" H 11075 10255 50  0000 L CNN
-F 2 "kimchi_ulid:KIMCHI_MICRO" H 11050 10300 50  0001 C CNN
-F 3 "" H 11050 10300 50  0001 C CNN
-	1    11050 10300
+P 11100 10300
+F 0 "K1" H 11125 10346 50  0000 L CNN
+F 1 "KIMCHI_MICRO" H 11125 10255 50  0000 L CNN
+F 2 "kimchi_ulid:KIMCHI_MICRO" H 11100 10300 50  0001 C CNN
+F 3 "" H 11100 10300 50  0001 C CNN
+F 4 "DNP" H 11100 10300 50  0001 C CNN "Populate"
+	1    11100 10300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x30_Counter_Clockwise J4
+L Connector_Generic_MountingPin:Conn_02x30_Counter_Clockwise_MountingPin J4
 U 1 1 60D90730
 P 5050 8000
 AR Path="/60D90730" Ref="J4"  Part="1" 
@@ -1105,7 +1093,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 7900 1200 7900
 $Comp
-L Connector_Generic:Conn_02x30_Counter_Clockwise J3
+L Connector_Generic_MountingPin:Conn_02x30_Counter_Clockwise_MountingPin J3
 U 1 1 60D907FA
 P 2450 8000
 AR Path="/60D907FA" Ref="J3"  Part="1" 
@@ -1158,16 +1146,11 @@ Wire Wire Line
 	3300 7300 3300 7400
 Wire Wire Line
 	3300 7400 2750 7400
-NoConn ~ 2750 7500
-NoConn ~ 5350 7200
-NoConn ~ 5350 8400
-NoConn ~ 2250 7600
 Wire Wire Line
 	2250 7500 1200 7500
 Wire Wire Line
 	1200 7500 1200 7400
 Connection ~ 1200 7400
-NoConn ~ 5350 6800
 $Comp
 L Connector_Generic_MountingPin:Conn_01x15_MountingPin J5
 U 1 1 60E5D78D
@@ -1599,6 +1582,9 @@ F 0 "D1" H 12450 3366 50  0000 C CNN
 F 1 "PMEG1020EH" H 12450 3275 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-123F" H 12450 2975 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf" H 12450 3150 50  0001 C CNN
+F 4 "1727-3849-1-ND" H 12450 3150 50  0001 C CNN "Vendorpart"
+F 5 "Nexperia" H 12450 3150 50  0001 C CNN "Mfgr"
+F 6 "PMEG1020EH,115" H 12450 3150 50  0001 C CNN "Mfgrpart"
 	1    12450 3150
 	1    0    0    -1  
 $EndComp
@@ -1641,7 +1627,66 @@ F 0 "L1" H 10600 10345 50  0000 L CNN
 F 1 "GG_LOGO" H 10600 10254 50  0000 L CNN
 F 2 "kimchi_ulid:gg-4x4" H 10550 10300 50  0001 C CNN
 F 3 "" H 10550 10300 50  0001 C CNN
+F 4 "DNP" H 10550 10300 50  0001 C CNN "Populate"
 	1    10550 10300
+	1    0    0    -1  
+$EndComp
+Text Label 2250 2450 2    50   ~ 0
+P1_11
+Text Label 2250 7600 2    50   ~ 0
+P1_11
+Text Label 5350 1650 0    50   ~ 0
+P2_58
+Text Label 5350 6800 0    50   ~ 0
+P2_58
+Text Label 5350 7200 0    50   ~ 0
+P2_54
+Text Label 5350 2050 0    50   ~ 0
+P2_54
+Text Label 5350 3250 0    50   ~ 0
+P2_42
+Text Label 5350 8400 0    50   ~ 0
+P2_42
+Text Label 2750 7500 0    50   ~ 0
+P1_51
+Text Label 2750 2350 0    50   ~ 0
+P1_51
+$Comp
+L Connector_Generic:Conn_02x30_Counter_Clockwise J1
+U 1 1 5E5E1603
+P 2450 2850
+AR Path="/5E5E1603" Ref="J1"  Part="1" 
+AR Path="/5E34BAA5/5E5E1603" Ref="J?"  Part="1" 
+F 0 "J1" H 2500 4467 50  0000 C CNN
+F 1 "DF40HC(3.5)-60DS" H 2500 4376 50  0000 C CNN
+F 2 "kimchi_ulid:DF40HC(3.5)-60DS" H 2450 2850 50  0001 C CNN
+F 3 "~" H 2450 2850 50  0001 C CNN
+F 4 "H11917CT-ND" H 2450 2850 50  0001 C CNN "Vendorpart"
+F 5 "Hirose" H 2450 2850 50  0001 C CNN "Mfgr"
+F 6 "DF40HC(3.5)-60DS-0.4V(51)" H 2450 2850 50  0001 C CNN "Mfgrpart"
+	1    2450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 6110C964
+P 2500 9700
+F 0 "#PWR0133" H 2500 9450 50  0001 C CNN
+F 1 "GND" H 2505 9527 50  0000 C CNN
+F 2 "" H 2500 9700 50  0001 C CNN
+F 3 "" H 2500 9700 50  0001 C CNN
+	1    2500 9700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0134
+U 1 1 6110CDDD
+P 5100 9700
+F 0 "#PWR0134" H 5100 9450 50  0001 C CNN
+F 1 "GND" H 5105 9527 50  0000 C CNN
+F 2 "" H 5100 9700 50  0001 C CNN
+F 3 "" H 5100 9700 50  0001 C CNN
+	1    5100 9700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
